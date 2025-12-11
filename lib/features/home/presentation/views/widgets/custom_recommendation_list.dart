@@ -32,7 +32,7 @@ class CustomRecommendationList extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 194, // Item height + extra for blur shadow
+      height: 194,
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
         padding: const EdgeInsets.symmetric(horizontal: 19, vertical: 20),

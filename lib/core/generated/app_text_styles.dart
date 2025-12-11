@@ -21,6 +21,12 @@ class TextStyles {
     fontSize: 12,
   );
 
+  static const poppinsW400S16 = TextStyle(
+    fontFamily: font,
+    fontWeight: FontWeight.w400,
+    fontSize: 16,
+  );
+
   static const poppinsW500S12 = TextStyle(
     fontFamily: font,
     fontWeight: FontWeight.w500,
@@ -67,6 +73,12 @@ class TextStyles {
     fontFamily: font,
     fontWeight: FontWeight.w500,
     fontSize: 18,
+  );
+
+  static const poppinsW500S14 = TextStyle(
+    fontFamily: font,
+    fontWeight: FontWeight.w500,
+    fontSize: 14,
   );
 
   static const poppinsW600S30 = TextStyle(

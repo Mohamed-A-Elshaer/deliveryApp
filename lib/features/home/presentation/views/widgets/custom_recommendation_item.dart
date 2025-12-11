@@ -28,8 +28,8 @@ class _CustomRecommendationItemState extends State<CustomRecommendationItem> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 290,
-      height: 154,
+      width: 310,
+      height: 160,
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(22),

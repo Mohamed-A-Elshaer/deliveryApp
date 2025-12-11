@@ -5,6 +5,8 @@ class Assets {
   static const String imagesBasketIcon = 'assets/images/basketIcon.svg';
   static const String imagesBuns = 'assets/images/buns.png';
   static const String imagesBurger = 'assets/images/burger.png';
+  static const String imagesBurgerCarrito = 'assets/images/burgerCarrito.png';
+  static const String imagesBurgerCarritoSec = 'assets/images/burgerCarritoSec.png';
   static const String imagesBurgerPiece = 'assets/images/burgerPiece.png';
   static const String imagesBurrito = 'assets/images/burrito.png';
   static const String imagesFrias = 'assets/images/frias.png';
@@ -15,6 +17,7 @@ class Assets {
   static const String imagesOnion = 'assets/images/onion.png';
   static const String imagesOrangeJuice = 'assets/images/orangeJuice.png';
   static const String imagesPizza = 'assets/images/pizza.png';
+  static const String imagesPurpleHomeIcon = 'assets/images/purpleHomeIcon.svg';
   static const String imagesRealHotdog = 'assets/images/realHotdog.png';
   static const String imagesRealPizza = 'assets/images/realPizza.png';
   static const String imagesRealburger = 'assets/images/realburger.png';
@@ -22,5 +25,6 @@ class Assets {
   static const String imagesSaleIcon = 'assets/images/saleIcon.svg';
   static const String imagesShopIcon = 'assets/images/shopIcon.svg';
   static const String imagesTacos = 'assets/images/tacos.png';
+  static const String imagesWhiteHomeIcon = 'assets/images/WhiteHomeIcon.svg';
 
 }

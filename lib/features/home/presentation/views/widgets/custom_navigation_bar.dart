@@ -18,7 +18,7 @@ class CustomNavigationBar extends StatelessWidget {
     final double barWidth = MediaQuery.of(context).size.width - 40;
     const double barHeight = 64;
     const double cornerRadius = 20;
-    const double notchRadius = 50; // enlarged notch
+    const double notchRadius = 50;
 
     return SizedBox(
       height: 88,
@@ -26,9 +26,6 @@ class CustomNavigationBar extends StatelessWidget {
         clipBehavior: Clip.none,
         alignment: Alignment.bottomCenter,
         children: [
-          // -------------------------
-          // BOTTOM NAVIGATION BAR (single piece with central notch)
-          // -------------------------
           Positioned(
             bottom: 10, // lowered slightly inside the SizedBox
             child: PhysicalShape(
@@ -49,8 +46,7 @@ class CustomNavigationBar extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      // Home (clickable)
-                      _NavIcon(
+                      NavIcon(
                         icon: SvgPicture.asset(
                           Assets.imagesHomeIcon,
                           height: 23,
@@ -59,23 +55,21 @@ class CustomNavigationBar extends StatelessWidget {
                         onTap: () => onItemTapped(0),
                       ),
 
-                      // Basket (clickable) with same offset as before
                       Transform.translate(
                         offset: const Offset(-34, 0),
-                        child: _NavIcon(
+                        child: NavIcon(
                           icon: SvgPicture.asset(
                             Assets.imagesShopIcon,
                             height: 23,
                             width: 23,
                           ),
-                          onTap: () {}
+                          onTap: () => onItemTapped(2),
                         ),
                       ),
 
-                      // Favorite (non-clickable, keeps same offset)
                       Transform.translate(
                         offset: const Offset(40, 0),
-                        child:_NavIcon(
+                        child:NavIcon(
                             icon:  const Icon(
                               Icons.favorite_border,
                               color: Colors.grey,
@@ -85,8 +79,7 @@ class CustomNavigationBar extends StatelessWidget {
                         ),
                       ),
 
-                      // Avatar (non-clickable)
-                      _NavIcon(
+                      NavIcon(
                         icon: const CircleAvatar(
                           radius: 14,
                           backgroundImage:
@@ -103,43 +96,51 @@ class CustomNavigationBar extends StatelessWidget {
             ),
           ),
 
-          // -------------------------
-          // FLOATING MIDDLE BUTTON
-          // -------------------------
           Positioned(
-            bottom: 12, // keep button aligned with lowered bar
-              child: Container(
+            bottom: 12,
+            child: NavIcon(
+              size: 60,
+              onTap: () => onItemTapped(2),
+              icon: Container(
                 width: 60,
-                height:  60,
+                height: 60,
                 decoration: const BoxDecoration(
                   color: Color(0xff4B0082),
                   shape: BoxShape.circle,
                 ),
-                child: _NavIcon(
-                icon: Icon(Icons.shopping_basket_outlined,color: Colors.white,size: 30,),
-                onTap: ()=>onItemTapped(2),
-                
-                )
+                child: const Icon(
+                  Icons.shopping_basket,
+                  size: 28,
+                  color: Colors.white,
+                ),
               ),
             ),
+          ),
+
         ],
       ),
     );
   }
 }
 
-class _NavIcon extends StatelessWidget {
-  const _NavIcon({this.icon, required this.onTap});
+class NavIcon extends StatelessWidget {
+  const NavIcon({
+    this.icon,
+    required this.onTap,
+    this.size = 40,
+  });
   final Widget? icon;
   final VoidCallback onTap;
+  final double size;
+
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
+    return InkWell(
       onTap: onTap,
       child: SizedBox(
-        height: 40,
-        width: 40,
-        child: Center(child:icon),
+        height: size,
+        width: size,
+        child: Center(child: icon),
       ),
     );
   }

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../features/details/presentation/views/details_view.dart';
 import '../../features/home/presentation/views/caritto_view.dart';
 import '../../features/home/presentation/views/home_view.dart';
+import '../../features/home/presentation/views/search_view.dart';
 import '../../features/on_boarding/presentation/views/on_boarding_view.dart';
 import '../../features/splash/presentation/views/splash_view.dart';
 
@@ -23,6 +24,9 @@ Route<dynamic> onGenerateRoute(RouteSettings settings){
 
     case CarittoView.routeName:
       return MaterialPageRoute(builder: (context)=>const CarittoView());
+
+    case SearchView.routeName:
+      return MaterialPageRoute(builder: (context)=>const SearchView());
 
     default:
       return MaterialPageRoute(builder: (context)=>const Scaffold());

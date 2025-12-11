@@ -5,6 +5,7 @@ import 'package:inicio/core/generated/assets.dart';
 import 'package:inicio/core/widgets/custom_app_bar.dart';
 import 'package:inicio/core/widgets/custom_text_field.dart';
 import 'package:inicio/features/home/presentation/views/caritto_view.dart';
+import 'package:inicio/features/home/presentation/views/search_view.dart';
 import 'package:inicio/features/home/presentation/views/widgets/custom_recommendation_list.dart';
 import 'custom_navigation_bar.dart';
 import 'custom_category_list.dart';
@@ -22,7 +23,12 @@ class _HomeViewBodyState extends State<HomeViewBody> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     appBar: CustomAppBar(leading: const CustomTextField(),
+     appBar: CustomAppBar(leading: GestureDetector(
+       onTap: () {
+         Navigator.of(context).pushNamed(SearchView.routeName);
+       },
+       child: const CustomTextField(),
+     ),
      title: Text('Inicio',style: TextStyles.poppinsW600S22.copyWith(color: const Color(0xff5117AC)),),
      actions: [
        IconButton(onPressed: (){}, icon: const Icon(Icons.notifications_none,color: Color(0xff20D0C4),)),

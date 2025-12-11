@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 
-/// Clipper that creates a pill shape with a centered circular notch.
 class CustomNotchedBarClipper extends CustomClipper<Path> {
   CustomNotchedBarClipper({
     required this.cornerRadius,

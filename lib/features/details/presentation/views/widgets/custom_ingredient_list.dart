@@ -35,7 +35,6 @@ class CustomIngredientList extends StatelessWidget {
     const double itemSpacing = -20.0;
     const double itemWidth = 110.0;
 
-    // Calculate actual content width considering overlapping
     final double contentWidth = itemWidth + ((ingredient.length - 1) * (itemWidth + itemSpacing));
 
     return ClipRect(
@@ -43,7 +42,7 @@ class CustomIngredientList extends StatelessWidget {
         height: 120,
         child: SingleChildScrollView(
           scrollDirection: Axis.horizontal,
-          physics: const ClampingScrollPhysics(), // Prevents over-scroll
+          physics: const ClampingScrollPhysics(),
           child: SizedBox(
             width: contentWidth,
             child: Stack(

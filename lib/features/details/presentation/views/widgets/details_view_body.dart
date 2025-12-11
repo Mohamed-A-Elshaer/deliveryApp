@@ -22,7 +22,7 @@ class _DetailsViewBodyState extends State<DetailsViewBody> {
       appBar: CustomAppBar(
         color: Colors.black,
         leading: IconButton(
-            onPressed: (){},
+            onPressed: ()=>Navigator.pop(context),
             icon: const Icon(Icons.arrow_back_ios_new_outlined, color: Colors.white)),
         title: Text('Hamburguesa especial', style: TextStyles.poppinsW600S16.copyWith(color: Colors.white)),
       ),

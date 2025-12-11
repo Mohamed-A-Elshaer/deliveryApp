@@ -15,7 +15,7 @@ class Inicio extends StatelessWidget{
   Widget build(BuildContext context) {
     return MaterialApp(
 onGenerateRoute: onGenerateRoute,
-initialRoute: HomeView.routeName,
+initialRoute: SplashView.routeName,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.white,

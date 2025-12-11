@@ -6,8 +6,8 @@ class CustomButton extends StatelessWidget{
   final String text;
   final VoidCallback onTap;
   final double? width;
-
-  const CustomButton({super.key,required this.text,required this.onTap,this.width=368});
+  final double? height;
+  const CustomButton({super.key,required this.text,required this.onTap,this.width=368,this.height=63});
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -15,7 +15,7 @@ class CustomButton extends StatelessWidget{
      child: Padding(
        padding: const EdgeInsets.symmetric(horizontal: 23),
        child: Container(
-         height: 63,
+         height: height,
          width:width,
          decoration: BoxDecoration(
            borderRadius: BorderRadius.circular(15),
