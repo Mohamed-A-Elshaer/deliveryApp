@@ -8,29 +8,29 @@ class CustomTextField extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 132,
-      height: 33,
+      width: 100,
+      height: 40,
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(6),
         border: Border.all(
-          color: const Color(0xFFE2EDF2),
+          color: const Color(0xffBBBBBB),
           width: 1,
         ),
       ),
       child: Row(
         children: [
-          const SizedBox(width: 6),
+          const SizedBox(width: 10),
           const Icon(
             Icons.search,
-            size: 7.13,
+            size: 18,
             color: Color(0xFF5117AC),
           ),
-          const SizedBox(width: 6),
+          const SizedBox(width: 10),
           Text(
             "Buscar",
             style: TextStyles.poppinsW400S10.copyWith(
-              color: const Color(0xFFE2EDF2),
+              color: const Color(0xffBBBBBB),
             ),
           ),
         ],

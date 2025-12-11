@@ -2,6 +2,25 @@
 class Assets {
   Assets._();
 
+  static const String imagesBasketIcon = 'assets/images/basketIcon.svg';
+  static const String imagesBuns = 'assets/images/buns.png';
+  static const String imagesBurger = 'assets/images/burger.png';
+  static const String imagesBurgerPiece = 'assets/images/burgerPiece.png';
+  static const String imagesBurrito = 'assets/images/burrito.png';
+  static const String imagesFrias = 'assets/images/frias.png';
+  static const String imagesHamburguesaEspecial = 'assets/images/hamburguesaEspecial.png';
+  static const String imagesHomeIcon = 'assets/images/homeIcon.svg';
+  static const String imagesLettuce = 'assets/images/lettuce.png';
+  static const String imagesMalteadasTropicales = 'assets/images/malteadasTropicales.png';
+  static const String imagesOnion = 'assets/images/onion.png';
+  static const String imagesOrangeJuice = 'assets/images/orangeJuice.png';
+  static const String imagesPizza = 'assets/images/pizza.png';
+  static const String imagesRealHotdog = 'assets/images/realHotdog.png';
+  static const String imagesRealPizza = 'assets/images/realPizza.png';
+  static const String imagesRealburger = 'assets/images/realburger.png';
   static const String imagesRestIcon = 'assets/images/restIcon.png';
+  static const String imagesSaleIcon = 'assets/images/saleIcon.svg';
+  static const String imagesShopIcon = 'assets/images/shopIcon.svg';
+  static const String imagesTacos = 'assets/images/tacos.png';
 
 }
